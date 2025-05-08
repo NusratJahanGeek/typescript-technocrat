@@ -1,52 +1,56 @@
-How TypeScript Improves Code Quality and Project Maintainability
+# How TypeScript Improves Code Quality and Project Maintainability
+
 TypeScript isn’t just a “nice to have” — it’s a game-changer for writing reliable, scalable code. Here's how it helps:
 
-✅ Benefits of TypeScript
-Early Bug Detection
-Type errors are caught during development, not after deployment.
+## ✅ Benefits of TypeScript
 
-Improved Readability
-Type annotations make your code self-documenting and easier for others to understand.
+- **Early Bug Detection**  
+  Type errors are caught during development, not after deployment.
 
-Safe Refactoring
-Rename functions or change types confidently — TypeScript will alert you to any breaking changes.
+- **Improved Readability**  
+  Type annotations make your code self-documenting and easier for others to understand.
 
-Enhanced IDE Support
-Features like IntelliSense, autocomplete, and inline documentation improve developer productivity.
+- **Safe Refactoring**  
+  Rename functions or change types confidently — TypeScript will alert you to any breaking changes.
 
-Scalability for Large Projects
-Helps teams manage complex codebases with clear contracts and maintainable structures.
+- **Enhanced IDE Support**  
+  Features like IntelliSense, autocomplete, and inline documentation improve developer productivity.
 
-TypeScript acts like a smart code reviewer who never sleeps and always double-checks your work.
+- **Scalability for Large Projects**  
+  Helps teams manage complex codebases with clear contracts and maintainable structures.
 
-Union and Intersection Types in TypeScript
-Union Types (|)
+---
+
+# Union and Intersection Types in TypeScript
+
+## Union Types (`|`)
+
 A union type allows a variable to be one of several types.
 
-ts
-Copy
-Edit
+````ts
 function formatValue(value: string | number): string {
-return typeof value === "string" ? value.toUpperCase() : value.toFixed(2);
+  return typeof value === "string" ? value.toUpperCase() : value.toFixed(2);
 }
 
 formatValue("hello"); // Output: "HELLO"
-formatValue(12.345); // Output: "12.35"
+formatValue(12.345);  // Output: "12.35"
+
 Here, value can be a string or a number, and TypeScript ensures both are handled correctly.
 
-Intersection Types (&)
+## Intersection Types (`&`)
 An intersection type combines multiple types into one, requiring all properties to be present.
 
-ts
-Copy
-Edit
+```ts
 type User = { name: string };
 type Admin = { isAdmin: boolean };
 
 type AdminUser = User & Admin;
 
 const superUser: AdminUser = {
-name: "Nusrat",
-isAdmin: true,
+  name: "Nusrat",
+  isAdmin: true,
 };
+
 In this example, AdminUser must satisfy both User and Admin types — it's a merged type with all required properties.
+
+````

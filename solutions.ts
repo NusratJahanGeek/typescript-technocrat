@@ -84,16 +84,3 @@ function formatString(input: string, toUpper: boolean = true): string {
       }, 1000);
     });
   }
-  
-  // Sample test calls (You can remove or comment these before submission)
-  console.log(formatString("hello World"));
-  console.log(filterByRating([{ title: "Item1", rating: 3.5 }, { title: "Item2", rating: 4.2 }]));
-  console.log(concatenateArrays([1, 2], [3, 4]));
-  const car = new Car("Toyota", 2022, "Corolla");
-  console.log(car.getInfo(), car.getModel());
-  console.log(processValue("typescript"));
-  console.log(processValue(7));
-  console.log(getMostExpensiveProduct([{ name: "A", price: 100 }, { name: "B", price: 150 }]));
-  console.log(getDayType(Day.Sunday));
-  squareAsync(5).then(console.log).catch(console.error);
-  
